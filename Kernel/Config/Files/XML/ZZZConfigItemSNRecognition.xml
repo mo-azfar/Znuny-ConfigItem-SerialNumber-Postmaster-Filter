@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<otrs_config version="2.0" init="Config">
+    <Setting Name="PostMaster::PreFilterModule###5-ConfigItemSNRecognition" Required="0" Valid="1">
+        <Description Translatable="1">Recognize if a email contains asset serial number and link it with CI.</Description>
+        <Navigation>Core::Email::PostMaster</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Module">Kernel::System::PostMaster::Filter::ConfigItemSNRecognition</Item>
+                <Item Key="Name">ConfigItem Serial Number Recognition</Item>
+				<Item Key="DynamicField">
+                    <Hash>
+                        <Item Key="RelatedComputer">Computer</Item>
+                        <Item Key="RelatedHardware">Hardware</Item>
+                    </Hash>
+                </Item>
+                <Item Key="SerialNumberRegExp">\s*SerialNumber:\s+(.*)\s*</Item>
+                <Item Key="SearchInBody">1</Item>
+            </Hash>
+        </Value>
+    </Setting>
+</otrs_config>
