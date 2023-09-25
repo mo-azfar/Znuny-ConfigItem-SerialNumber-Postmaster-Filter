@@ -15,7 +15,6 @@ use warnings;
 
 our @ObjectDependencies = (
     'Kernel::Config',
-	'Kernel::System::CustomerUser',
 );
 
 sub new {
